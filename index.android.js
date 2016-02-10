@@ -12,6 +12,7 @@ import React, {
   Text,
   View
 } from 'react-native';
+import MyCustomView from './MyCustomView';
 
 
 var API_KEY = '7waqfqbprs7pajbz28mqf6vz';
@@ -53,10 +54,8 @@ constructor(props) {
     }
 
     return (
-      <ListView
-        dataSource={this.state.dataSource}
-        renderRow={this.renderMovie}
-        style={styles.listView}/>
+      <MyCustomView style={styles.container}>
+      </MyCustomView>
     );
   }
 
@@ -73,6 +72,7 @@ constructor(props) {
   renderMovie(movie) {
     return (
       <View style={styles.container}>
+      <MyCustomView></MyCustomView>
       <Text>
           THIS IS A MOVIE
         </Text>
@@ -94,7 +94,7 @@ var styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#50f0dc',
   },
   thumbnail: {
     width: 53,

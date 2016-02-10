@@ -20,8 +20,8 @@ import javax.annotation.Nullable;
 /**
  * Created by danielleerickson on 2/5/16.
  */
-public class ReactImageManager extends SimpleViewManager<ReactImageView> {
-    private static final String REACT_CLASS = "RCTImageView";
+public class ReactCustomViewManager extends SimpleViewManager<ReactImageView> {
+    private static final String REACT_CLASS = "RCTMyCustomView";
     private Object mCallerContext = null;
 
     @Override
