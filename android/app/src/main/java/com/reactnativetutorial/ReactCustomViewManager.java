@@ -20,7 +20,7 @@ import javax.annotation.Nullable;
 /**
  * Created by danielleerickson on 2/5/16.
  */
-public class ReactCustomViewManager extends SimpleViewManager<ReactImageView> {
+public class ReactCustomViewManager extends SimpleViewManager<MyCustomView> {
     private static final String REACT_CLASS = "RCTMyCustomView";
     private Object mCallerContext = null;
 
@@ -30,22 +30,22 @@ public class ReactCustomViewManager extends SimpleViewManager<ReactImageView> {
     }
 
     @Override
-    protected ReactImageView createViewInstance(ThemedReactContext context) {
-        return new ReactImageView(context, Fresco.newDraweeControllerBuilder(), mCallerContext);
+    protected MyCustomView createViewInstance(ThemedReactContext context) {
+        return new MyCustomView(context);
     }
 
     @ReactProp(name = "src")
-    public void setSrc(ReactImageView view, @Nullable String src) {
+    public void setSrc(MyCustomView view, @Nullable String src) {
         view.setSource(src);
     }
 
     @ReactProp(name = "borderRadius", defaultFloat = 0f)
-    public void setBorderRadius(ReactImageView view, float borderRadius) {
+    public void setBorderRadius(MyCustomView view, float borderRadius) {
         view.setBorderRadius(borderRadius);
     }
 
     @ReactProp(name = ViewProps.RESIZE_MODE)
-    public void setResizeMode(ReactImageView view, @Nullable String resizeMode) {
+    public void setResizeMode(MyCustomView view, @Nullable String resizeMode) {
         view.setScaleType(ImageResizeMode.toScaleType(resizeMode));
     }
 

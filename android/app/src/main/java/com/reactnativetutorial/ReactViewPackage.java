@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * Created by danielleerickson on 2/9/16.
  */
-public class ReactImagePackage implements ReactPackage {
+public class ReactViewPackage implements ReactPackage {
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         return Collections.emptyList();
