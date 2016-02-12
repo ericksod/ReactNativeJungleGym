@@ -1,4 +1,4 @@
-package com.reactnativetutorial;
+package com.reactnativetutorial.MapView;
 
 import android.content.Context;
 import android.view.View;
@@ -12,7 +12,7 @@ import com.facebook.react.uimanager.events.RCTEventEmitter;
 /**
  * Created by danielleerickson on 2/9/16.
  */
-public class MyCustomView extends View {
+public class MyCustomView extends View{
     private String source;
     private float borderRadius;
     private ScalingUtils.ScaleType scaleType;

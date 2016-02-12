@@ -12,7 +12,7 @@ import React, {
   Text,
   View
 } from 'react-native';
-import MyCustomView from './MyCustomView';
+import AndroidMapView from './AndroidMapView';
 
 
 var API_KEY = '7waqfqbprs7pajbz28mqf6vz';
@@ -33,8 +33,8 @@ constructor(props) {
 
   render() {
     return (
-      <MyCustomView style={styles.container}>
-      </MyCustomView>
+      <AndroidMapView style={styles.container}>
+      </AndroidMapView>
     );
   }
 }
